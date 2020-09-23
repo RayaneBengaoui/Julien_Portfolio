@@ -195,12 +195,12 @@ svg {
 }
 
 #right-plant {
-  animation: plant 2.5s ease infinite alternate 0.5s;
+  animation: plant 2.5s ease infinite alternate;
   transform-origin: bottom;
 }
 
 #man {
-  animation: man 2.5s ease infinite alternate 1s;
+  animation: man 2s ease infinite alternate;
   transform-origin: bottom;
 }
 
