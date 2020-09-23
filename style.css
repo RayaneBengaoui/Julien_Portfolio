@@ -30,6 +30,8 @@ nav {
   display: flex;
   min-height: 10vh;
   width: 60%;
+  align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -42,13 +44,13 @@ nav {
 }
 
 #logo h1 {
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
 
-ul {
+nav ul {
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex: 2 1 10rem;
 }
@@ -136,10 +138,13 @@ footer ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex: 1 1 40rem;
+  list-style: none;
 }
 
 footer h4 {
   flex: 1 1 40rem;
+  font-size: 2rem;
 }
 
 .intro-animation {
@@ -178,4 +183,75 @@ footer h4 {
 .hide span {
   transform: translateY(100%);
   display: inline-block;
+}
+
+svg {
+  z-index: 5;
+}
+
+#left-plant {
+  animation: plant 2s ease infinite alternate;
+  transform-origin: bottom;
+}
+
+#right-plant {
+  animation: plant 2.5s ease infinite alternate 0.5s;
+  transform-origin: bottom;
+}
+
+#man {
+  animation: man 2.5s ease infinite alternate 1s;
+  transform-origin: bottom;
+}
+
+#carre1 {
+  animation: carre 3s infinite linear;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+#carre2 {
+  animation: carre-reverse 3s infinite linear;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+#carre3 {
+  animation: carre 3s infinite linear;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes plant {
+  from {
+    transform: rotateZ(-3deg);
+  }
+  to {
+    transform: rotateZ(3deg);
+  }
+}
+
+@keyframes man {
+  from {
+    transform: rotateZ(-1.5deg);
+  }
+  to {
+    transform: rotateZ(1.5deg);
+  }
+}
+
+@keyframes carre {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes carre-reverse {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-360deg);
+  }
 }
