@@ -28,27 +28,28 @@
             </div>
             <ul>
               <li><a href="../index-noAnimation.html">Home</a></li>
-              <li><a class="active" href="./index.html">Projects</a></li>
-              <li><a href="../contact/">Contact</a></li>
+              <li><a href="../projects/index.html">Projects</a></li>
+              <li><a class="active" href="">Contact</a></li>
             </ul>
           </nav>
         </header>
-
-        <section class="projects">
-          <div class="travelly">
-            <h2>Travelly</h2>
-            <a href="https://travelly-company.netlify.app" target="_blank"
-              ><img src="../img/travelly.jpg" alt="travelly-project"
-            /></a>
-          </div>
-
-          <div class="elena-joy">
-            <h2>Elena Joy</h2>
-            <a href="https://site-fleuriste.netlify.app" target="_blank"
-              ><img src="../img/elena-joy.jpg" alt="elena-project"
-            /></a>
-          </div>
+        <section class="form-section">
+          <form>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required />
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required />
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <button type="submit">Submit</button>
+          </form>
         </section>
+
         <footer>
           <h4>Rayane Bengaoui &copy; 2020</h4>
           <ul>
@@ -70,7 +71,6 @@
           </ul>
         </footer>
       </body>
-      <script src="../app.js"></script>
     </html>
   </html>
 </html>

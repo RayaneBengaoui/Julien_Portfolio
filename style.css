@@ -124,6 +124,10 @@ a {
   z-index: -1;
 }
 
+.skills {
+  min-height: 90vh;
+}
+
 footer {
   min-height: 10vh;
   padding: 0% 5%;
@@ -254,4 +258,72 @@ svg {
   to {
     transform: rotateZ(-360deg);
   }
+}
+
+.projects {
+  width: 90%;
+  margin: auto;
+  min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.projects h2 {
+  margin: 5rem;
+}
+
+.travelly,
+.elena-joy {
+  flex: 1 1 40rem;
+}
+
+.form-section {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 3rem;
+}
+
+.form-section form {
+  padding: 3rem 10rem;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2), 0px 20px 40px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 2rem;
+}
+
+.form-section form input,
+.form-section form textarea {
+  margin: 2rem;
+}
+
+.form-section form input:focus,
+.form-section form textarea:focus {
+  outline: 2px solid black;
+}
+
+.form-section form textarea {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+}
+
+.form-section form button {
+  width: 100%;
+  padding: 2rem;
+  background: #154353;
+  color: white;
+}
+
+.form-section form button:focus {
+  background: #33696b;
 }
