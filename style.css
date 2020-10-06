@@ -7,6 +7,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -141,6 +142,65 @@ a {
 
 .skills {
   min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.skill-title {
+}
+
+.skill-title p {
+  font-size: 6rem;
+}
+
+.skills-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-first {
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+}
+.skills-second {
+  margin-top: 10rem;
+  width: 100%;
+  display: flex;
+}
+.skills-third {
+  margin-top: 10rem;
+  width: 100%;
+  display: flex;
+}
+
+.skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+#cplus {
+  width: 15%;
+}
+#matlab {
+  width: 22%;
+}
+#maya {
+  width: 25%;
+}
+#opengl {
+  width: 30%;
+}
+#photoshop {
+  width: 20%;
+}
+#unity {
+  width: 30%;
 }
 
 footer {
