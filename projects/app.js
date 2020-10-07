@@ -85,31 +85,31 @@ const tl = gsap.timeline({
   defaults: { ease: "power1.out" },
 });
 
-tl.from(".information", { x: -300, opacity: 0, duration: 1 });
-tl.from(".demo", { y: 300, opacity: 0, duration: 1 }, "-=1");
-tl.from("h2", { x: -300, opacity: 0, duration: 0.5 });
-tl.from("h3", { opacity: 0, duration: 0.5 }, "-=0.3");
-tl.from("h4", { opacity: 0, duration: 0.5 }, "-=0.3");
+tl.from("#info_1", { x: -300, opacity: 0, duration: 1 });
+tl.from("#demo_1", { y: 300, opacity: 0, duration: 1 }, "-=1");
+tl.from("#h2_1", { x: -300, opacity: 0, duration: 0.5 });
+tl.from("#h3_1", { opacity: 0, duration: 0.5 }, "-=0.3");
+tl.from("#h4_1", { opacity: 0, duration: 0.5 }, "-=0.3");
 tl.from(".compare img", { y: 300, opacity: 0, duration: 1 });
-tl.from("p", { opacity: 0, duration: 1 }), "-=0.5";
+tl.from("#p_1", { opacity: 0, duration: 1 }), "-=0.5";
 tl.from(".img-comp-container", { x: 300, opacity: 0, duration: 1 }, "-=1");
-tl.to("h2", { color: "#D8BFD8", duration: 0.5 });
-tl.to("h4", { color: "#D8BFD8", duration: 0.5 }, "-=0.5");
+tl.to("#h2_1", { color: "#D8BFD8", duration: 0.5 });
+tl.to("#h4_1", { color: "#D8BFD8", duration: 0.5 }, "-=0.5");
+tl.to("#sticky-nav", { background: "#D8BFD8", duration: 0.5 }, "-=0.5");
 
 const tl2 = gsap.timeline({
-  scrollTrigger: { trigger: "pj2", start: "bottom center" },
+  scrollTrigger: { trigger: "#project_2" },
   defaults: { ease: "power1.out" },
 });
 
-tl2.from("pj2", { x: -300, opacity: 0, duration: 1 });
-// tl2.from(".demo", { y: 300, opacity: 0, duration: 1 }, "-=1");
-// tl2.from("h2", { x: -300, opacity: 0, duration: 0.5 });
-// tl2.from("h3", { opacity: 0, duration: 0.5 }, "-=0.3");
-// tl2.from("h4", { opacity: 0, duration: 0.5 }, "-=0.3");
-// tl2.from(".compare img", { y: 300, opacity: 0, duration: 1 });
-// tl2.from("p", { opacity: 0, duration: 1 }), "-=0.5";
-// tl2.from(".img-comp-container", { x: 300, opacity: 0, duration: 1 }, "-=1");
-// tl2.to("h2", { color: "#D8BFD8", duration: 0.5 });
-// tl2.to("h4", { color: "#D8BFD8", duration: 0.5 }, "-=0.5");
+tl2.from("#info_2", { x: 300, opacity: 0, duration: 1.5 });
+tl2.from("#demo_2", { y: 300, opacity: 0, duration: 1.5 }, "-=1");
+tl2.from("#h2_2", { x: 300, opacity: 0, duration: 0.5 });
+tl2.from("#h3_2", { opacity: 0, duration: 0.5 }, "-=0.3");
+tl2.from("#h4_2", { opacity: 0, duration: 0.5 }, "-=0.3");
+tl2.from(".exemple", { y: 300, opacity: 0, duration: 1 });
+tl2.from(".tracing_gif", { x: -300, opacity: 0, duration: 1.5 });
+tl2.to("#h2_2", { color: "#9ca6d9", duration: 0.5 }, "-=0.5");
+tl2.to("#sticky-nav", { background: "#9ca6d9", duration: 0.5 }, "-=0.5");
 
 initComparisons();
