@@ -344,28 +344,109 @@ svg {
   }
 }
 
+/* PROJECT PART */
+
 .projects {
-  width: 90%;
-  margin: auto;
-  min-height: 90vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  margin-top: 1rem;
+  width: 100%;
+  min-height: 360vh;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+}
+
+.project {
+  min-height: 90vh;
+  width: 100%;
+  display: flex;
   flex-direction: row;
-  text-align: center;
-  flex-wrap: wrap;
 }
 
-.projects h2 {
-  margin: 5rem;
+.information {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: black;
 }
 
-.travelly,
-.elena-joy {
-  flex: 1 1 40rem;
+.information h2 {
+  color: white;
+  font-size: 7rem;
+  padding-top: 10rem;
 }
+
+.information h3 {
+  color: white;
+  font-size: 2rem;
+  margin-top: 5rem;
+  margin-left: 6rem;
+}
+.information h4 {
+  color: white;
+  font-size: 2rem;
+  margin-top: 3rem;
+}
+
+.compare {
+  margin-top: 5rem;
+  margin-left: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compare p {
+  color: white;
+  font-size: 8rem;
+  margin: 0rem 2rem;
+}
+
+.compare img {
+  border-radius: 1rem;
+  width: 40%;
+}
+
+.demo {
+  flex: 1 1 50%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-comp-container {
+  right: 30rem;
+  position: relative;
+  height: 400px; /*should be the same height as the images*/
+}
+
+.img-comp-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.img-comp-img img {
+  display: block;
+  vertical-align: middle;
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index: 9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  opacity: 1;
+  border-radius: 50%;
+}
+
+/* FORM PART */
 
 .form-section {
   min-height: 80vh;
