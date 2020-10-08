@@ -178,6 +178,7 @@ a {
 }
 
 .skill {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -185,8 +186,73 @@ a {
 }
 
 #cplus {
+  margin-left: 5rem;
   width: 15%;
+  position: relative;
+  cursor: pointer;
 }
+
+.cplus-detail {
+  margin-left: 2rem;
+  max-height: 10rem;
+  position: relative;
+  opacity: 0;
+  width: 0%;
+  /* min-width: 20rem; */
+  background-color: lightsteelblue;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.cplus-detail p {
+  position: absolute;
+  margin: 1rem;
+  font-size: 130%;
+}
+
+#matlab {
+  margin-right: 5rem;
+  width: 15%;
+  position: relative;
+  cursor: pointer;
+}
+
+.matlab-detail {
+  margin-right: 2rem;
+  max-height: 10rem;
+  position: relative;
+  opacity: 0;
+  width: 0%;
+  /* min-width: 20rem; */
+  background-color: lightcoral;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.matlab-detail p {
+  position: absolute;
+  margin: 1rem;
+  font-size: 130%;
+}
+
+.activation {
+  animation: skill-left 2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.desactivation {
+  animation: skill-right 2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
 #matlab {
   width: 22%;
 }
@@ -341,6 +407,32 @@ svg {
   }
   to {
     transform: translateY(-30px);
+  }
+}
+
+@keyframes skill-left {
+  from {
+    /* transform: translateX(0); */
+    width: 0rem;
+    opacity: 0;
+  }
+  to {
+    /* transform: translateX(-10rem); */
+    width: 35rem;
+    opacity: 1;
+  }
+}
+
+@keyframes skill-right {
+  from {
+    /* transform: translateX(0); */
+    width: 35rem;
+    opacity: 1;
+  }
+  to {
+    /* transform: translateX(-10rem); */
+    width: 0rem;
+    opacity: 0;
   }
 }
 
