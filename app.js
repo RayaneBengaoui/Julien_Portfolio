@@ -3,7 +3,6 @@
 
 const skillDivs = document.querySelectorAll(".skill");
 
-const skillImgList = [cplus, matlab];
 
 const cplusDetail = document.querySelector(".cplus-detail");
 const tl = gsap.timeline({
