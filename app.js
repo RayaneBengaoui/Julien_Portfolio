@@ -3,7 +3,6 @@
 
 const skillDivs = document.querySelectorAll(".skill");
 
-
 const cplusDetail = document.querySelector(".cplus-detail");
 const tl = gsap.timeline({
   defaults: { ease: "power1.out" },
@@ -22,16 +21,6 @@ const tl_skill = gsap.timeline({
 tl_skill.from(".skills-first", { x: 300, opacity: 0, duration: 1.5 });
 tl_skill.from(".skills-second", { x: -300, opacity: 0, duration: 1.5 }, "-=1");
 tl_skill.from(".skills-third", { y: 300, opacity: 0, duration: 1 }, "-=2");
-
-// cplus.addEventListener("click", () => {
-//   if (cplusDetail.classList.contains("activation")) {
-//     cplusDetail.classList.remove("activation");
-//     cplusDetail.classList.add("desactivation");
-//   } else {
-//     cplusDetail.classList.remove("desactivation");
-//     cplusDetail.classList.add("activation");
-//   }
-// });
 
 function activateSkillImages() {
   skillDivs.forEach((div) => {

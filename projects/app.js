@@ -83,6 +83,7 @@ function initComparisons() {
 const tl = gsap.timeline({
   scrollTrigger: { trigger: ".project" },
   defaults: { ease: "power1.out" },
+  start: "top center",
 });
 
 tl.from("#info_1", { x: -300, opacity: 0, duration: 1 });
@@ -98,7 +99,7 @@ tl.from(".img-comp-container", { x: 300, opacity: 0, duration: 1 }, "-=1");
 // tl.to("#sticky-nav", { background: "#D8BFD8", duration: 0.5 }, "-=0.5");
 
 const tl2 = gsap.timeline({
-  scrollTrigger: { trigger: "#project_2" },
+  scrollTrigger: { trigger: "#project_2", start: "top center" },
   defaults: { ease: "power1.out" },
 });
 
@@ -112,65 +113,81 @@ tl2.from(".tracing_gif", { x: -300, opacity: 0, duration: 1.5 });
 // tl2.to("#h2_2", { color: "#9ca6d9", duration: 0.5 }, "-=0.5");
 // tl2.to("#sticky-nav", { background: "#9ca6d9", duration: 0.5 }, "-=0.5");
 
+const tl3 = gsap.timeline({
+  scrollTrigger: { trigger: "#project_3", start: "top center" },
+  defaults: { ease: "power1.out" },
+});
+
+tl3.from("#info_3", { x: 300, opacity: 0, duration: 1.5 });
+tl3.from("#demo_3", { y: 300, opacity: 0, duration: 1.5 }, "-=1");
+tl3.from("#h2_3", { x: 300, opacity: 0, duration: 0.5 });
+tl3.from("#h3_3", { opacity: 0, duration: 0.5 }, "-=0.3");
+tl3.from("#h4_3", { opacity: 0, duration: 0.5 }, "-=0.3");
+tl3.from("#aliage", { y: 300, opacity: 0, duration: 1 });
+tl3.from("#char", { x: -800, opacity: 0, duration: 1.5 });
+
+const tl4 = gsap.timeline({
+  scrollTrigger: { trigger: "#project_4", start: "top center" },
+  defaults: { ease: "power1.out" },
+});
+
+tl4.from("#info_4", { x: 300, opacity: 0, duration: 1.5 });
+tl4.from("#demo_4", { y: 300, opacity: 0, duration: 1.5 }, "-=1");
+tl4.from("#h2_4", { x: 300, opacity: 0, duration: 0.5 });
+tl4.from("#h3_4", { opacity: 0, duration: 0.5 }, "-=0.3");
+tl4.from("#h4_4", { opacity: 0, duration: 0.5 }, "-=0.3");
+// tl4.from(".exemple", { y: 300, opacity: 0, duration: 1 });
+// tl4.from(".tracing_gif", { x: -300, opacity: 0, duration: 1.5 });
+
 initComparisons();
 
-
-
 const nav = document.querySelector("#sticky-nav");
-// const title1 = document.querySelector("#h2_1");
-// const title2 = document.querySelector("#h2_2");
-// const title3 = document.querySelector("#h2_3");
-const titles = document.querySelectorAll("h2")
+const titles = document.querySelectorAll("h2");
 
-titles.forEach(title => {
+titles.forEach((title) => {
   title.style.transition = "color 1.2s ease-in-out";
 });
 
-function activeTitleColor (index) {
-  for( i =0; i<titles.length;i++){
-    if(i != index){
-      titles[i].style.color = "white"
-    }else{
-      switch(index){
-        case 0 :
+function activeTitleColor(index) {
+  for (i = 0; i < titles.length; i++) {
+    if (i != index) {
+      titles[i].style.color = "white";
+    } else {
+      switch (index) {
+        case 0:
           titles[i].style.color = "#D8BFD8";
           break;
-        case 1 :
+        case 1:
           titles[i].style.color = "#9ca6d9";
           break;
-        case 2 :
+        case 2:
           titles[i].style.color = "#fffaf2";
           break;
-        case 3 :
+        case 3:
           titles[i].style.color = "#ff884d";
       }
     }
   }
 }
-window.onscroll = function () { myFunction() };
-
+window.onscroll = function () {
+  myFunction();
+};
 
 function myFunction() {
-
-  var scrollPos = window.scrollY 
+  var scrollPos = window.scrollY;
   // || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
 
   if (scrollPos >= 0 && scrollPos < 700) {
-
     nav.style.background = "#D8BFD8";
     nav.style.transition = "1.2s ease-in-out";
     activeTitleColor(0);
-
-  } else if (scrollPos>= 700 && scrollPos < 1400) {
-
+  } else if (scrollPos >= 700 && scrollPos < 1400) {
     nav.style.background = "#9ca6d9";
     activeTitleColor(1);
-
-  }else if(scrollPos>= 1400 && scrollPos < 2100) {
-
+  } else if (scrollPos >= 1400 && scrollPos < 2100) {
     nav.style.background = "#fffaf2";
     activeTitleColor(2);
-  }else{
+  } else {
     nav.style.background = "#ff884d";
     activeTitleColor(3);
   }
