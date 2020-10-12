@@ -93,9 +93,9 @@ tl.from("#h4_1", { opacity: 0, duration: 0.5 }, "-=0.3");
 tl.from(".compare img", { y: 300, opacity: 0, duration: 1 });
 tl.from("#p_1", { opacity: 0, duration: 1 }), "-=0.5";
 tl.from(".img-comp-container", { x: 300, opacity: 0, duration: 1 }, "-=1");
-tl.to("#h2_1", { color: "#D8BFD8", duration: 0.5 });
-tl.to("#h4_1", { color: "#D8BFD8", duration: 0.5 }, "-=0.5");
-tl.to("#sticky-nav", { background: "#D8BFD8", duration: 0.5 }, "-=0.5");
+// tl.to("#h2_1", { color: "#D8BFD8", duration: 0.5 });
+// tl.to("#h4_1", { color: "#D8BFD8", duration: 0.5 }, "-=0.5");
+// tl.to("#sticky-nav", { background: "#D8BFD8", duration: 0.5 }, "-=0.5");
 
 const tl2 = gsap.timeline({
   scrollTrigger: { trigger: "#project_2" },
@@ -109,7 +109,69 @@ tl2.from("#h3_2", { opacity: 0, duration: 0.5 }, "-=0.3");
 tl2.from("#h4_2", { opacity: 0, duration: 0.5 }, "-=0.3");
 tl2.from(".exemple", { y: 300, opacity: 0, duration: 1 });
 tl2.from(".tracing_gif", { x: -300, opacity: 0, duration: 1.5 });
-tl2.to("#h2_2", { color: "#9ca6d9", duration: 0.5 }, "-=0.5");
-tl2.to("#sticky-nav", { background: "#9ca6d9", duration: 0.5 }, "-=0.5");
+// tl2.to("#h2_2", { color: "#9ca6d9", duration: 0.5 }, "-=0.5");
+// tl2.to("#sticky-nav", { background: "#9ca6d9", duration: 0.5 }, "-=0.5");
 
 initComparisons();
+
+
+
+const nav = document.querySelector("#sticky-nav");
+// const title1 = document.querySelector("#h2_1");
+// const title2 = document.querySelector("#h2_2");
+// const title3 = document.querySelector("#h2_3");
+const titles = document.querySelectorAll("h2")
+
+titles.forEach(title => {
+  title.style.transition = "color 1.2s ease-in-out";
+});
+
+function activeTitleColor (index) {
+  for( i =0; i<titles.length;i++){
+    if(i != index){
+      titles[i].style.color = "white"
+    }else{
+      switch(index){
+        case 0 :
+          titles[i].style.color = "#D8BFD8";
+          break;
+        case 1 :
+          titles[i].style.color = "#9ca6d9";
+          break;
+        case 2 :
+          titles[i].style.color = "#fffaf2";
+          break;
+        case 3 :
+          titles[i].style.color = "#ff884d";
+      }
+    }
+  }
+}
+window.onscroll = function () { myFunction() };
+
+
+function myFunction() {
+
+  var scrollPos = window.scrollY 
+  // || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
+
+  if (scrollPos >= 0 && scrollPos < 700) {
+
+    nav.style.background = "#D8BFD8";
+    nav.style.transition = "1.2s ease-in-out";
+    activeTitleColor(0);
+
+  } else if (scrollPos>= 700 && scrollPos < 1400) {
+
+    nav.style.background = "#9ca6d9";
+    activeTitleColor(1);
+
+  }else if(scrollPos>= 1400 && scrollPos < 2100) {
+
+    nav.style.background = "#fffaf2";
+    activeTitleColor(2);
+  }else{
+    nav.style.background = "#ff884d";
+    activeTitleColor(3);
+  }
+}
