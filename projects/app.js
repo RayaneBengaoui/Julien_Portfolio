@@ -136,8 +136,8 @@ tl4.from("#demo_4", { y: 300, opacity: 0, duration: 1.5 }, "-=1");
 tl4.from("#h2_4", { x: 300, opacity: 0, duration: 0.5 });
 tl4.from("#h3_4", { opacity: 0, duration: 0.5 }, "-=0.3");
 tl4.from("#h4_4", { opacity: 0, duration: 0.5 }, "-=0.3");
-// tl4.from(".exemple", { y: 300, opacity: 0, duration: 1 });
-// tl4.from(".tracing_gif", { x: -300, opacity: 0, duration: 1.5 });
+tl4.from("#little-mesh", { y: 300, opacity: 0, duration: 1 });
+tl4.from("#big-mesh", { x: -300, opacity: 0, duration: 1.5 });
 
 initComparisons();
 
