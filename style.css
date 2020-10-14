@@ -766,3 +766,20 @@ svg {
 .form-section form button:focus {
   background: #33696b;
 }
+
+@media screen and (max-width: 1250px) {
+  .img-comp-container {
+    margin-top: 2rem;
+  }
+
+  .img-comp-container {
+  }
+
+  #project_2 {
+    flex-wrap: wrap-reverse;
+  }
+
+  .tracing_gif {
+    width: 58rem;
+  }
+}
