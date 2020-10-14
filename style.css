@@ -767,7 +767,20 @@ svg {
   background: #33696b;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1470px) {
+  html {
+    font-size: 45%;
+  }
+  .splash {
+    display: none;
+  }
+  svg {
+    width: 80%;
+  }
+  nav {
+    width: 100%;
+  }
+
   .img-comp-container {
     margin-top: 2rem;
   }
@@ -781,5 +794,99 @@ svg {
 
   .tracing_gif {
     width: 58rem;
+  }
+}
+
+@media screen and (max-width: 754px) {
+  html {
+    font-size: 40%;
+  }
+  svg {
+    height: 60%;
+  }
+  main-head {
+    width: 100%;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1 1 100rem;
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  #logo h1 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 180%;
+  }
+  nav ul {
+    flex: 1 1 60rem;
+    margin: 2rem 0rem;
+  }
+  .intro-text {
+    margin-top: 5rem;
+    text-align: center;
+  }
+  .intro-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .intro-social a {
+    margin: 2rem;
+  }
+  .intro-images {
+    text-align: center;
+  }
+
+  .skill img {
+    width: 17%;
+  }
+
+  .intro-slide {
+    margin-top: 3rem;
+  }
+
+  .skills {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .skills-first {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills-second {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills-third {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill {
+    width: 100%;
+    margin-top: 5rem;
   }
 }
