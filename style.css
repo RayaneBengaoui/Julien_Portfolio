@@ -37,6 +37,10 @@ nav {
   flex-wrap: wrap;
 }
 
+.link-logo {
+  margin-left: 5rem;
+}
+
 #logo {
   display: flex;
   align-items: center;
@@ -606,8 +610,25 @@ svg {
   margin: 0rem 5rem;
 }
 
+#h2_1 {
+  text-align: center;
+}
+
 #h2_2 {
   font-size: 6rem;
+  text-align: center;
+}
+#h2_3 {
+  font-size: 6rem;
+  text-align: center;
+}
+#h2_4 {
+  font-size: 6rem;
+  text-align: center;
+}
+
+.information h1 {
+  text-align: center;
 }
 
 .information h3 {
@@ -774,7 +795,7 @@ svg {
     display: none;
   }
   svg {
-    width: 80%;
+    width: 100%;
   }
   nav {
     width: 100%;
@@ -789,7 +810,164 @@ svg {
   }
 
   .tracing_gif {
+    margin-top: 5rem;
     width: 58rem;
+  }
+
+  .img-comp-container {
+    right: 25rem;
+    position: relative;
+    height: 250px; /*should be the same height as the images*/
+  }
+
+  .img-comp-img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    border-radius: 1rem;
+  }
+
+  .img-comp-img img {
+    width: auto;
+
+    height: 250px;
+    display: block;
+    vertical-align: middle;
+  }
+
+  .video-mask-1 {
+    width: 500px;
+    height: 350px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+  }
+
+  #aliage {
+    position: absolute;
+
+    width: 500px;
+  }
+  .video-mask-2 {
+    width: 600px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+  }
+
+  #char {
+    position: absolute;
+
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 1253px) {
+  .intro {
+    min-height: 90vh;
+  }
+
+  .skill img {
+    width: 15%;
+  }
+
+  .skills {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .skills-first {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills-second {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills-third {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill {
+    width: 100%;
+    margin-top: 5rem;
+  }
+
+  .skills-third {
+    margin-bottom: 8rem;
+  }
+
+  .img-comp-container {
+    right: 25rem;
+    position: relative;
+    height: 200px; /*should be the same height as the images*/
+  }
+
+  .img-comp-img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    border-radius: 1rem;
+  }
+
+  .img-comp-img img {
+    width: auto;
+
+    height: 200px;
+    display: block;
+    vertical-align: middle;
+  }
+
+  .video-mask-1 {
+    width: 400px;
+    height: 250px;
+  }
+
+  #aliage {
+    width: 400px;
+  }
+  .video-mask-2 {
+    width: 500px;
+    height: 300px;
+  }
+
+  #char {
+    width: 500px;
+  }
+
+  #project_4 {
+    flex-wrap: wrap-reverse;
+  }
+
+  #big-mesh {
+    margin: 5rem 0rem;
+  }
+
+  #h2_2 {
+    margin-top: 5rem;
+  }
+  #h2_3 {
+    margin-top: 10rem;
+  }
+  #h2_4 {
+    margin-top: 8rem;
   }
 }
 
@@ -910,10 +1088,6 @@ svg {
     text-align: center;
   }
 
-  .tracing_gif {
-    margin-top: 5rem;
-  }
-
   .video-mask-1 {
     width: 250px;
     height: 200px;
@@ -945,15 +1119,8 @@ svg {
     width: 450px;
   }
 
-  #project_4 {
-    flex-wrap: wrap-reverse;
-  }
-
-  #big-mesh {
-    margin: 5rem 0rem;
-  }
-
   .img-comp-container {
+    margin-top: 5rem;
     right: 25rem;
     position: relative;
     height: 200px; /*should be the same height as the images*/
@@ -973,17 +1140,5 @@ svg {
     height: 200px;
     display: block;
     vertical-align: middle;
-  }
-
-  .img-comp-slider {
-    position: absolute;
-    z-index: 9;
-    cursor: ew-resize;
-    width: 20px;
-    height: 20px;
-
-    background-color: white;
-    opacity: 1;
-    border-radius: 50%;
   }
 }
