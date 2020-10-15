@@ -237,7 +237,8 @@ a {
 .cplus-detail p {
   position: absolute;
   margin: 1rem;
-  font-size: 130%;
+  font-size: 2rem;
+  text-align: center;
 }
 
 /* #matlab {
@@ -266,7 +267,8 @@ a {
 .matlab-detail p {
   position: absolute;
   margin: 1rem;
-  font-size: 130%;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .maya-detail {
@@ -287,7 +289,8 @@ a {
 .maya-detail p {
   position: absolute;
   margin: 1rem;
-  font-size: 130%;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .opengl-detail {
@@ -309,7 +312,8 @@ a {
 .opengl-detail p {
   position: absolute;
   margin: 1rem;
-  font-size: 130%;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .ps-detail {
@@ -330,7 +334,8 @@ a {
 .ps-detail p {
   position: absolute;
   margin: 1rem;
-  font-size: 130%;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .unity-detail {
@@ -351,8 +356,9 @@ a {
 .unity-detail p {
   position: absolute;
   margin: 1rem;
-  font-size: 130%;
+  font-size: 2rem;
   color: white;
+  text-align: center;
 }
 
 .activation {
@@ -778,9 +784,6 @@ svg {
     margin-top: 2rem;
   }
 
-  .img-comp-container {
-  }
-
   #project_2 {
     flex-wrap: wrap-reverse;
   }
@@ -883,6 +886,10 @@ svg {
     margin-top: 5rem;
   }
 
+  .skills-third {
+    margin-bottom: 8rem;
+  }
+
   .intro-animation {
     text-align: center;
   }
@@ -903,6 +910,10 @@ svg {
     text-align: center;
   }
 
+  .tracing_gif {
+    margin-top: 5rem;
+  }
+
   .video-mask-1 {
     width: 250px;
     height: 200px;
@@ -917,5 +928,62 @@ svg {
     position: absolute;
 
     width: 260px;
+  }
+  .video-mask-2 {
+    width: 400px;
+    height: 280px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+  }
+
+  #char {
+    position: absolute;
+
+    width: 450px;
+  }
+
+  #project_4 {
+    flex-wrap: wrap-reverse;
+  }
+
+  #big-mesh {
+    margin: 5rem 0rem;
+  }
+
+  .img-comp-container {
+    right: 25rem;
+    position: relative;
+    height: 200px; /*should be the same height as the images*/
+  }
+
+  .img-comp-img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    border-radius: 1rem;
+  }
+
+  .img-comp-img img {
+    width: auto;
+
+    height: 200px;
+    display: block;
+    vertical-align: middle;
+  }
+
+  .img-comp-slider {
+    position: absolute;
+    z-index: 9;
+    cursor: ew-resize;
+    width: 20px;
+    height: 20px;
+
+    background-color: white;
+    opacity: 1;
+    border-radius: 50%;
   }
 }
