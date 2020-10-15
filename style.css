@@ -201,13 +201,6 @@ a {
   width: 50%;
 }
 
-/* TRACKPOINT */
-/* TRACKPOINT */
-/* TRACKPOINT */
-/* TRACKPOINT */
-/* TRACKPOINT */
-/* TRACKPOINT */
-
 #skill-img-left {
   margin-left: 5rem;
   position: relative;
@@ -888,5 +881,41 @@ svg {
   .skill {
     width: 100%;
     margin-top: 5rem;
+  }
+
+  .intro-animation {
+    text-align: center;
+  }
+
+  .intro-animation-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 3rem;
+  }
+
+  .projects h2 {
+    margin-top: 15rem;
+  }
+
+  .information {
+    text-align: center;
+  }
+
+  .video-mask-1 {
+    width: 250px;
+    height: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+  }
+
+  #aliage {
+    position: absolute;
+
+    width: 260px;
   }
 }
